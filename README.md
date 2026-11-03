@@ -1,49 +1,25 @@
-### Samarateja Reddy Gutta
+# Samarateja Reddy Gutta
 
-Backend and applied-AI engineer. M.S. Computer Science, George Washington University.
-Washington, D.C. · open to remote.
+Software engineer with 1.5 years of experience building backend and distributed systems. M.S. in Computer Science (Machine Intelligence & Cognition), The George Washington University, May 2026. Based in Washington, D.C. — open to SDE / Backend / AI roles across the U.S. and remote.
 
-I like the parts of a system where the interesting decision is not *how* to build
-something but *which failure you are willing to accept*. Most of what's here is
-built around one of those.
+At YuppTV I built and operated an event-driven pipeline with Apache Kafka and Amazon SQS ingesting 500,000+ telemetry events per day with zero message loss, shared the on-call rotation for a platform with 10,000+ daily active users, and raised CI test coverage from 55% to 88%.
 
----
+## Featured projects
 
-**[Distributed Object Storage Platform](https://github.com/Samarateja0118/distributed-object-storage)** · Java 21 · Spring Boot · gRPC · PostgreSQL
+- **[GPU Scheduler Platform](https://github.com/Samarateja0118/gpu-scheduler-platform)** — GPU job scheduler and inference-serving platform in Go on Kubernetes: cluster scheduling and resource allocation. *(In progress)*
+- **[Production RAG System](https://github.com/Samarateja0118/rag-eval-system)** — Retrieval-augmented generation system in Python with an evaluation harness. *(In progress)*
+- **[Distributed Object Storage Engine](https://github.com/Samarateja0118/distributed-object-storage)** — S3-style multi-tenant object store in Java 21 / Spring Boot (~11,000 lines, ~113 tests): SHA-256 content-addressed chunks over bidirectional gRPC, JWT tenant isolation, PostgreSQL + Flyway.
+- **[MLB MLOps Pipeline](https://github.com/Samarateja0118/mlb-mlops-pipeline)** — End-to-end MLOps pipeline for MLB player projections: training, tracking and deployment.
+- **[Access AI Gateway](https://github.com/Samarateja0118/access-ai-gateway)** — LLM gateway over a multi-tenant access-control system, with guardrails against indirect prompt injection and cross-tenant data exposure.
+- **[Movie MCP Server](https://github.com/Samarateja0118/movie-mcp-server)** — One domain layer behind both an MCP server and a FastAPI API, with retries, circuit breaking and response caching.
+- **Portico** — Multilingual (English/Spanish/French) AI intake and scheduling platform for immigration law firms: a Claude agent with strict-schema tools books consultations from real calendar availability; 327 test functions in CI. Live at [porticointake.com](https://porticointake.com) (private repo).
 
-An S3-inspired object store across seven services. Objects are split into
-content-addressed chunks on a data plane while their metadata lives in a separate
-relational control plane — so no transaction spans an object's two halves, and
-every write has to choose which inconsistency it leaves behind. Twelve architecture
-decision records argue those choices out, costs included.
+## Tech I work with
 
-**[Access AI Gateway](https://github.com/Samarateja0118/access-ai-gateway)** · TypeScript · PostgreSQL · LLM security
+Python · Java 21 · Go · TypeScript · SQL · Apache Kafka · Amazon SQS · FastAPI · Spring Boot · PostgreSQL · Redis · Docker · Kubernetes · Terraform · Amazon Web Services (AWS) · GitHub Actions · Large Language Models (LLM) · Model Context Protocol (MCP)
 
-An LLM gateway built around indirect prompt injection: the payload isn't typed into
-the chat, it's stored in a door's name by someone with permission to name doors, and
-reaches the model weeks later through a tool result. Input filtering never sees it.
-Tenant scope resolves before the query, tool output is scanned as untrusted input,
-and an adversarial suite proves it holds — including base64, homoglyphs, and
-instructions split across two rows.
+## Elsewhere
 
-**[TradeWatch](https://tradewatch-hazel.vercel.app)** · Python · FastAPI · React · [live](https://tradewatch-hazel.vercel.app)
-
-A daily briefing agent for India–US trade policy, and a dashboard over it. A
-deterministic prefilter drops routine notices at zero marginal cost so model calls
-are spent only where they earn their keep. The design problem is that a language
-model is an unreliable component inside a pipeline that has to be dependable, so
-every stage degrades instead of failing.
-
-**[Movie Catalog Service](https://github.com/Samarateja0118/movie-mcp-server)** · Python · MCP · FastAPI · [live](https://movie-finder-demo.vercel.app)
-
-One domain layer behind two independent transports — an MCP server for assistants
-and an HTTP API for the web demo — so caching, retries and failure behaviour are
-identical whichever door a caller comes through.
-
----
-
-Things I care about, visible in the code rather than claimed here: tests that assert
-a decision rather than a line, comments that explain why instead of restating what,
-and a written record of the reasoning behind anything non-obvious.
-
-[Portfolio](https://portfolio-ten-psi-ml0tn08w0t.vercel.app) · [LinkedIn](https://www.linkedin.com/in/samaratejareddygutta/) · samarateja18@gmail.com
+- Portfolio: https://portfolio-v2-ecru-beta.vercel.app/
+- LinkedIn: https://www.linkedin.com/in/samarateja-reddy
+- Email: samarateja18@gmail.com
